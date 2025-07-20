@@ -1,10 +1,12 @@
-export default function Layout({ children }: { children: React.ReactNode }) {
+import Navbar from "../components/Navbar";
+
+export default function Layout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head>
-        <title>My App</title>
-      </head>
-      <body>{children}</body>
-    </html>
+    <main className="font-work-sans">
+      <Navbar />
+      {children}
+    </main>
   );
 }
